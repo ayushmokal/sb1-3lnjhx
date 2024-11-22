@@ -1,0 +1,43 @@
+<div class="relative bg-white" x-data="{ mobileMenuOpen: false }">
+  <div class="border-b border-gray-200">
+    <!-- Announcement Bar -->
+    <div class="bg-blue-500 text-white text-center py-2">
+      <p>Download our latest version of the YO Home Sperm Test
+        <a href="#" class="inline-block bg-white text-blue-500 px-4 py-1 rounded-full ml-2">Download YO App</a>
+      </p>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="/">
+            <img class="h-8 w-auto" src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}">
+          </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/collections/all" class="text-gray-500 hover:text-gray-900">Shop</a>
+          <a href="/pages/how-it-works" class="text-gray-500 hover:text-gray-900">How Yo Works</a>
+          <a href="/pages/support" class="text-gray-500 hover:text-gray-900">Support</a>
+          <a href="/pages/about" class="text-gray-500 hover:text-gray-900">About Us</a>
+        </div>
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+          <a href="/search" class="text-gray-400 hover:text-gray-500">
+            {% render 'icon-search' %}
+          </a>
+          <a href="/account" class="text-gray-400 hover:text-gray-500">
+            {% render 'icon-account' %}
+          </a>
+          <a href="/cart" class="text-gray-400 hover:text-gray-500">
+            {% render 'icon-cart' %}
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

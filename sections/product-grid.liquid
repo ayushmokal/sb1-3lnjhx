@@ -1,0 +1,28 @@
+<div class="bg-white">
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+        Explore the Full YO Product Line
+      </h2>
+    </div>
+
+    <div class="mt-16">
+      <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
+        {% for product in collections.all.products %}
+          <div class="group relative">
+            <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+              {{ product.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', class: 'object-center object-cover' }}
+            </div>
+            <div class="mt-4">
+              <p class="text-sm text-gray-500">{{ product.vendor }}</p>
+              <h3 class="text-lg font-medium text-gray-900">
+                <a href="{{ product.url }}">{{ product.title }}</a>
+              </h3>
+              <p class="mt-1 text-lg font-medium text-gray-900">{{ product.price | money }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
